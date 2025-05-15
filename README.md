@@ -18,3 +18,14 @@ npm install tailwindcss @tailwindcss/vite
 
 En los archivos ya se tiene todo lo necesario para que se ejecute TailWind sin ningun problema
 
+### Iniciar el Servidor local
+Para iniciar y ver las pruebas en un servidor local ejecuta el siguiente Comando:
+```
+npm run dev
+```
+
+### Descargar los Icons
+Para que se muestren los icons dentro del proyecto es necesario instalarlos.
+```
+npm install react-icons
+```
