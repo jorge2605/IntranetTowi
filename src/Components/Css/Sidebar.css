@@ -1,21 +1,5 @@
-a:hover{
-    color: #0c08f5;
-    text-decoration: none;
-    transform: scale(1.1);
-}
-img{
-    width: 45px;
-    height: 45px;
-}
-img:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-}
 #Title{
     color: #0707ff;
     font-size: 25px;
 }
-#Title:hover{
-    transform: scale(1.1);
-  
-}
+
