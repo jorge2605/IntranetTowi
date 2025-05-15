@@ -1,12 +1,20 @@
-# React + Vite
+# IntraTowi
+IntraTowi, sigue en proceso, esto es solo una idea que se tiene. El proyecto se desarrolla en React +  Vite, por lo que es necesario consultar lo que se necesita antes de ejecutar el proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Proceso de instalación
+Para instalar Towi es necesario sacar el repositorio de {GitHub}[https://github.com/jorge2605/IntranetTowi.git], despues clonalo en tu propia carpeta de proyecto
+ 
+### Una vez ya clonado
+Para iniciar el proyecto en tu equipo ejecuta el siguiente comando en la terminal de VS code de tu equipo 
+```
+npm Install
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+Se descargaran todo lo necesario. Tambien es necesario instalar TailWind, se descargara con el siguiente comando
+```
+npm install tailwindcss @tailwindcss/vite
+```
 
-## Expanding the ESLint configuration
+En los archivos ya se tiene todo lo necesario para que se ejecute TailWind sin ningun problema
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

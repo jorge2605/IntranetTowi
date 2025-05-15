@@ -18,9 +18,6 @@ function App() {
         <div className="col-span-full">
           <MachiningProgress />
         </div>
-        <div className="bg-red-500 text-white p-4 text-xl font-bold">
-  Tailwind debería verse en rojo 🔥
-</div>
       </main>
 
 
