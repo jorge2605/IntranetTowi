@@ -1,20 +1,27 @@
 import React from 'react'
 import './dashboard.css'
 import Icono from '../components/icono-dash/Icono'
+import Requisiciones from '../components/requisiciones/Requisiciones'
+import Proyectos from '../components/proyectos/Proyectos'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const {vista, setVista} = useState(null)
+  const [vista, setVista] = useState(null);
 
   const handleLogout = () => {
     localStorage.removeItem('auth');
     localStorage.removeItem('nombre');
     localStorage.removeItem('usuario');
-    console.log("se arma")
     navigate('/');
     window.location.reload()
+  };
+
+  const vistas = {
+  requisiciones: <Requisiciones />,
+  proyectos: <Proyectos />,
+  // usuario: <Usuario />
   };
 
   return (
@@ -44,7 +51,7 @@ const Dashboard = () => {
              />
           </div>
           <div className='centro'>
-            {vista === "requisi"}
+            {vistas[vista]}
           </div>
         </div>
       </div>
