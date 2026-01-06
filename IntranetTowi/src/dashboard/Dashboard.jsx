@@ -12,7 +12,7 @@ const Dashboard = () => {
     localStorage.removeItem('auth');
     localStorage.removeItem('nombre');
     localStorage.removeItem('usuario');
-    console.log()
+    console.log("se arma")
     navigate('/');
     window.location.reload()
   };
@@ -25,7 +25,7 @@ const Dashboard = () => {
             <Icono img="https://cdn.iconscout.com/icon/premium/png-512-thumb/orden-icon-svg-download-png-7083890.png?f=webp&w=512"
              titulo="Requisiciones"
              salir={false}
-             onClick={() => {setVista('requisiciones')}}
+             onClick={() => setVista("requisiciones")}
              />
             <Icono img="https://cdn.iconscout.com/icon/premium/png-512-thumb/gerente-de-proyecto-icon-svg-download-png-5563439.png?f=webp&w=512"
              titulo="Proyectos"
