@@ -4,7 +4,7 @@ import Login from './login/Login'
 import Dashboard from './dashboard/Dashboard'
 
 function App() {
-  const isAuthenticated = localStorage.getItem('auth') === 'false'
+  const isAuthenticated = localStorage.getItem('auth') === 'true'
   return (
     <>
     <Routes>

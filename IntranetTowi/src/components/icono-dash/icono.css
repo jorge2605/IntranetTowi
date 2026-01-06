@@ -1,4 +1,4 @@
-.borde .noborde {
+.borde {
     width: 40px;
     padding: 5px;
     margin: 5px;
@@ -13,10 +13,14 @@
 }
 
 .noborde {
+    width: 40px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 1s;
     border: none;
     border-radius: 5px;
-    flex-shrink: 6;
-    transform: rotateY('150')
+    transform: rotate(180deg);
 }
 
 .completo {
