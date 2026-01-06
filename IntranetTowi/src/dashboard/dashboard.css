@@ -25,5 +25,5 @@
 .centro {
     flex: 1;
     overflow-y: auto;
-    background-color: rgb(255, 238, 3);
+    /* background-color: rgb(255, 238, 3); */
 }

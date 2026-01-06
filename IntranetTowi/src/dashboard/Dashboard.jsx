@@ -1,19 +1,47 @@
 import React from 'react'
 import './dashboard.css'
 import Icono from '../components/icono-dash/Icono'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+  const {vista, setVista} = useState(null)
+
+  const handleLogout = () => {
+    localStorage.removeItem('auth');
+    localStorage.removeItem('nombre');
+    localStorage.removeItem('usuario');
+    navigate('/');
+    window.location.reload()
+  };
+
   return (
     <>
       <div className='dash'>
         <div className="contenido">
           <div className='oeste'>
-            <Icono img="https://cdn.iconscout.com/icon/premium/png-512-thumb/orden-icon-svg-download-png-7083890.png?f=webp&w=512" titulo="Requisiciones"/>
-            <Icono img="https://cdn.iconscout.com/icon/premium/png-512-thumb/gerente-de-proyecto-icon-svg-download-png-5563439.png?f=webp&w=512" titulo="Proyectos"/>
-            <Icono img="https://cdn.iconscout.com/icon/premium/png-512-thumb/usuario-icon-svg-download-png-8063145.png?f=webp&w=512" titulo="Usuario"/>
-            <Icono img="https://cdn.iconscout.com/icon/premium/png-512-thumb/salir-de-pantalla-completa-icon-svg-download-png-4827491.png?f=webp&w=512" titulo="Salir" salir={true}/>
+            <Icono img="https://cdn.iconscout.com/icon/premium/png-512-thumb/orden-icon-svg-download-png-7083890.png?f=webp&w=512"
+             titulo="Requisiciones"
+             onClick={() => {setVista('requisiciones')}}
+             />
+            <Icono img="https://cdn.iconscout.com/icon/premium/png-512-thumb/gerente-de-proyecto-icon-svg-download-png-5563439.png?f=webp&w=512"
+             titulo="Proyectos"
+             onClick={() => {setVista('proyectos')}}
+             />
+            <Icono img="https://cdn.iconscout.com/icon/premium/png-512-thumb/usuario-icon-svg-download-png-8063145.png?f=webp&w=512"
+            titulo="Usuario"
+            onClick={() => {setVista('usuario')}}
+            />
+            <Icono img="https://cdn.iconscout.com/icon/premium/png-512-thumb/salir-de-pantalla-completa-icon-svg-download-png-4827491.png?f=webp&w=512"
+            titulo="Salir"
+             salir={true}
+             onClick={handleLogout}
+             />
           </div>
-          <div className='centro'></div>
+          <div className='centro'>
+            {vista === "requisi"}
+          </div>
         </div>
       </div>
     </>
