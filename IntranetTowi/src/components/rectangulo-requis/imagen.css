@@ -1,0 +1,23 @@
+.imagen {
+    display: block;
+    align-items: center;
+}
+
+.id {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.estado {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.usuario {
+    font-size: 12px;
+}
+
+.fecha {
+    font-size: 14px;
+    font-weight: 700;
+}

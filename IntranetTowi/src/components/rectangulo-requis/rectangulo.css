@@ -1,0 +1,37 @@
+.rectangulo-requisiciones img {
+    width: 15px;
+}
+
+.rectangulo-requisiciones {
+    border: solid rgb(8, 233, 0) 3px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 1s;
+    margin: 5px 10px;
+}
+
+.rectangulo-requisiciones:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.urgente {
+    border: solid rgb(233, 0, 0) 3px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 300px;
+}
