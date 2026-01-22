@@ -1,0 +1,198 @@
+/* Encabezado */
+.header-proyectos {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.titulo-proyectos {
+  text-align: center;
+  font-size: 26px;
+  margin: 0;
+}
+
+.acciones-proyectos {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Organización */
+.proyectos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cartas */
+.proyecto-card {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 12px;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  box-sizing: border-box;
+}
+
+.unico-proyecto .proyecto-card {
+  max-width: 100%;
+  width: 100%;
+}
+
+.titulo-proyecto {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.proyecto-card p {
+  margin: 2px 0;
+  line-height: 1.3;
+}
+
+.linea-doble {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Estados */
+.en-proceso { background-color: #ffea00; }
+.cerrado    { background-color: #15df00; }
+.detenido   { background-color: #c00000; }
+.reproceso  { background-color: #00a4e6; }
+
+/* Buscador*/
+.contenedor_boton {
+  position: relative;
+  --size-button: 40px;
+}
+
+.contenedor_boton .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--size-button);
+  height: var(--size-button);
+  padding: 8px;
+  pointer-events: none;
+}
+
+.contenedor_boton .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.input {
+  width: var(--size-button);
+  height: var(--size-button);
+  padding-left: var(--size-button);
+  font-size: 15px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+  color: #000;
+  background: #fff;
+  transition: .3s ease;
+  box-shadow:
+    1.5px 1.5px 3px #0e0e0e,
+    -1.5px -1.5px 3px rgb(95 94 94 / 25%);
+}
+
+.input:focus {
+  width: 200px;
+  cursor: text;
+  box-shadow: 0 2px 8px #000;
+}
+
+/* Sugerencias */
+.sugerencias {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,.2);
+  z-index: 20;
+}
+
+.sugerencia-item {
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sugerencia-item:hover {
+  background: #f0f0f0;
+}
+
+/* Botones */
+.boton-circular {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  box-shadow:
+    1.5px 1.5px 3px #0e0e0e,
+    -1.5px -1.5px 3px rgb(95 94 94 / 25%);
+}
+
+.boton-circular svg {
+  width: 20px;
+  height: 20px;
+}
+
+.recargar:hover svg {
+  animation: girar .6s linear;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+/* Toast de sweetalert*/
+.colored-toast.swal2-icon-error {
+  background: #c00000 !important;
+  color: #fff !important;
+}
+
+/*Responsividad*/
+@media (min-width: 768px) {
+  .proyecto-card {
+    width: calc(33.333% - 12px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .proyecto-card {
+    width: calc(25% - 12px);
+  }
+}
+
+@media (max-width: 480px) {
+  .proyectos-grid {
+    padding: 8px;
+  }
+
+  .proyecto-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
