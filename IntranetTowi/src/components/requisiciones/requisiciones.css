@@ -22,3 +22,15 @@
     font-size: 12px;
     color: #000000;
   }
+
+  @media screen and (max-width: 800px){
+    .contenedor-requisiciones {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+@media screen and (max-width: 600px){
+  .contenedor-requisiciones {
+    grid-template-columns: 1fr;
+  }
+}

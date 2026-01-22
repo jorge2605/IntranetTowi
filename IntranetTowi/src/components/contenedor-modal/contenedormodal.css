@@ -1,0 +1,9 @@
+.contenedorModal {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: solid black 2px;
+    width: 100%;
+    height: 100vh;
+    display: inline;
+}

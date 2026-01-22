@@ -1,9 +1,10 @@
 import React from 'react'
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Rectangulo from '../rectangulo-requis/Rectangulo';
 import Modal from '../modal/Modal';
+import ContenedorModal from '../contenedor-modal/ContenedorModal';
 
-const LIMIT = 5
+const LIMIT = 30
 
 const Requisiciones2 = () => {
     const [proyectos, setProyectos] = useState([]);
@@ -19,12 +20,14 @@ const Requisiciones2 = () => {
         fetch(`http://192.168.100.40:5000/requisicion?page=${page}&limit=${LIMIT}`)
             .then(res => res.json())
             .then(data => {
-                console.log("empieza")
                 setProyectos(prev => [...prev, ...data]);
                 setLoading(false);
-                console.log("termina")
             });
     }, [page]);
+
+    useEffect(() => {
+
+    })
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
@@ -41,13 +44,26 @@ const Requisiciones2 = () => {
     return (
         <>
             <div className="input-container">
-                <input type="text" id='buscar' placeholder=' ' value={busqueda} onKeyDown={(e) => setBusqueda(e.target.value)} />
+                <input 
+                type="text" 
+                id='buscar' 
+                placeholder=' ' 
+                onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                        setBusqueda(e.target.value)
+                        setSeleccionado("")
+                        setOpen(true)
+                    }
+                    }} 
+                onChange={(e) => {
+                    setBusqueda(e.target.value)
+                }}/>
                 <label htmlFor="buscar">Buscar por requisicion</label>
             </div>
             <div className="contenedor-requisiciones">
                 {proyectos.map(r => (
                     <Rectangulo
-                        key={r.Id}
+                        // key={r.Id}
                         id={r.Id}
                         progreso={r.Progreso}
                         usuario={r.requisitor}
@@ -55,6 +71,7 @@ const Requisiciones2 = () => {
                         estado={r.Estado}
                         onClick={() => {
                             setSeleccionado(r.Id);
+                            setBusqueda("")
                             setOpen(true);
                         }}
                     />
@@ -66,9 +83,9 @@ const Requisiciones2 = () => {
             {loading && <p style={{ textAlign: 'center' }}>Cargando...</p>}
             <Modal open={open} onClose={() => setOpen(false)}>
                 <h3>{seleccionado}</h3>
-                <p>Contenido del modal</p>
-                <p>kprhe</p>
-                <p>kprhe</p>
+                <ContenedorModal 
+                id={seleccionado} 
+                busqueda={busqueda}/>
             </Modal>
         </>
     )

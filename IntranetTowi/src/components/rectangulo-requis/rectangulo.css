@@ -3,20 +3,23 @@
 }
 
 .rectangulo-requisiciones {
-    border: solid rgb(8, 233, 0) 3px;
+    border-bottom: solid rgb(8, 233, 0) 3px;
+    border-right: solid rgb(8, 233, 0) 3px;
     border-radius: 15px;
     cursor: pointer;
     transition: 1s;
     margin: 5px 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .rectangulo-requisiciones:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: 1s;
 }
 
 .urgente {
-    border: solid rgb(233, 0, 0) 3px;
+    border-bottom: solid rgb(233, 0, 0) 3px;
+    border-right: solid rgb(233, 0, 0) 3px;
 }
 
 .modal-overlay {

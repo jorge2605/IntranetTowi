@@ -1,7 +1,6 @@
 import React from 'react'
 import './icono.css'
 const Icono = (props) => {
-console.log(props.salir ? 'noborde' : 'borde')
   return (
     <>
         <div className='completo' onClick={props.onClick}>

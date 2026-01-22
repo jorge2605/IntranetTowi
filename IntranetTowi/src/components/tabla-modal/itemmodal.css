@@ -1,0 +1,16 @@
+.itemContenedor {
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 10px;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.segunda:hover {
+    background-color: aqua;
+}
+
+.itemContenedor:hover {
+    transform: scale(1.02);
+    transition: 1s;
+}
